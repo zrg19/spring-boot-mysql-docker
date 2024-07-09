@@ -1,0 +1,7 @@
+services:
+  spring-boot-app:
+    container_name: spring-boot-app
+    build: .
+    image: spring-boot-app
+    ports:
+      - 9090:8080
