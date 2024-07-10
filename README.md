@@ -24,13 +24,18 @@ Follow these steps to get the Microservices Architecture up and running:
    ```bash
    cd spring-boot-microservice-docker
    ```
-3. Build the Docker images:
+3. Build the Maven Project:
+
+   ```bash
+   mvn clean package
+   ```
+4. Build the Docker images:
 
    ```bash
    docker-compose build
    ```
 
-4. Start the services:
+5. Start the services:
 
    ```bash
    docker-compose up -d
@@ -38,7 +43,7 @@ Follow these steps to get the Microservices Architecture up and running:
 
    The `-d` flag runs the services in the background.
 
-5. Monitor the logs:
+6. Monitor the logs:
 
    ```bash
    docker-compose logs -f
