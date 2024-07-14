@@ -1,5 +1,5 @@
 # Spring Boot, Mysql and Docker
-Demo project for Spring Boot, Spring Security, Mysql &amp; Docker
+Demo project for Spring Boot, Spring Security, JWT Authentication & Authorization, Mysql &amp; Docker
 
 ## Prerequisites
 
