@@ -1,28 +1,30 @@
 package com.devfamz.spring_boot_mysql_docker.controllers;
 
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
 
-@Controller
+@RestController
 public class ContentController {
 
     @GetMapping("/home")
     public String handleWelcome() {
-        return "home";
+        return "Welcome to home!";
     }
 
     @GetMapping("/admin/home")
-    public String handleAdmin() {
-        return "home_admin";
+    public String handleAdminHome() {
+        return "Welcome to ADMIN home!";
     }
 
     @GetMapping("/user/home")
-    public String handleUser() {
-        return "home_user";
+    public String handleUserHome() {
+        return "Welcome to USER home!";
     }
 
     @GetMapping("/login")
     public String handleLogin() {
         return "custom_login";
     }
+
+
 }
