@@ -39,8 +39,8 @@ public class SecurityConfiguration {
                 .csrf(AbstractHttpConfigurer::disable)
                 .authorizeHttpRequests(registry -> {
             registry.requestMatchers("/home", "/register/**", "/authenticate").permitAll();
-            registry.requestMatchers("/admin/**").hasRole("ADMIN");
-            registry.requestMatchers("/user/**").hasRole("USER");
+            registry.requestMatchers("/admin/**", "/api/admin/**").hasRole("ADMIN");
+            registry.requestMatchers("/user/**", "/api/user/**").hasRole("USER");
             registry.anyRequest().authenticated();
         }).formLogin(AbstractAuthenticationFilterConfigurer::permitAll)
                 .addFilterBefore(jwtAuthenticationFilter, UsernamePasswordAuthenticationFilter.class)
